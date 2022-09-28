@@ -1,7 +1,7 @@
 class Item:
   def __init__(self, amount , imported, name, price):
     self.name:str = name
-    self.amount:float = amount
+    self.amount:int = amount
     self.name:str = name
     # if(imported):
     #     self.imported = "imported" 

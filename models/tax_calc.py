@@ -34,8 +34,8 @@ def reciept(items):
     for item in items:
         
         newTaxedItemPrice, tax = tax_calculator(item)
-        # print(f"{item.amount} \t{item.getName()}  \t\t{newTaxedItemPrice}")
+        print(f"{item.amount} \t{item.getName()}  \t\t{newTaxedItemPrice}")
         totaltax +=tax
         totalPrice += newTaxedItemPrice
-    # print(f"Sales Taxes: {round(totaltax,2)} \nTotal Price: {round(totalPrice,2)}")
+    print(f"Sales Taxes: {round(totaltax,2)} \nTotal Price: {round(totalPrice,2)}")
     return round(totaltax,2), round(totalPrice,2)
