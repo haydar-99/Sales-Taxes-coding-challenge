@@ -15,7 +15,7 @@ class Item:
   def DescripeItem(self):
             print(f"{self.amount} {self.imported} {self.name} at {self.price}")
     
-  def getName(self):
+  def get_Name(self):
       return self.name if self.imported == False else f"imported {self.name}"
       
         

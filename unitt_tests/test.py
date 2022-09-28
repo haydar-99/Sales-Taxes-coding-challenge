@@ -1,7 +1,7 @@
 import sys
 import unittest
 sys.path.append("..")
-from models.tax_calc import tax_calculator, reciept
+from models.tax_calc import tax_calculator, reciept, reciept_without_print
 from models.items import Item, food, medecins,books
 class Unit_tests(unittest.TestCase):
     
@@ -46,16 +46,16 @@ class Unit_tests(unittest.TestCase):
     # test the reciept and check the total Sales Tax and the Total of the whole shop-list
     def test_reciept_printer(self):
         # testing the first shopping-basket
-        self.assertEqual(reciept(self.list1)[0],1.50)
-        self.assertEqual(reciept(self.list1)[1],29.83)
+        self.assertEqual(reciept_without_print(self.list1)[0],1.50)
+        self.assertEqual(reciept_without_print(self.list1)[1],29.83)
         
         # testing the second shopping-basket
-        self.assertEqual(reciept(self.list2)[0],7.65)
-        self.assertEqual(reciept(self.list2)[1],65.15)
+        self.assertEqual(reciept_without_print(self.list2)[0],7.65)
+        self.assertEqual(reciept_without_print(self.list2)[1],65.15)
         
         # testing the third shopping-basket
-        self.assertEqual(reciept(self.list3)[0],6.70)
-        self.assertEqual(reciept(self.list3)[1],74.68)
+        self.assertEqual(reciept_without_print(self.list3)[0],6.70)
+        self.assertEqual(reciept_without_print(self.list3)[1],74.68)
         
         
         
