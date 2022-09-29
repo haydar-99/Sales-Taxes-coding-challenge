@@ -1,4 +1,6 @@
 "# Sales-Taxes-coding-challenge" 
+
+
 RUN THE PROJECT:
 clone the repository and and type in the command terminal: python main.py
 
