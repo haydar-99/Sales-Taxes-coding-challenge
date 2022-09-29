@@ -12,19 +12,19 @@ class store:
         self.shopped_items =[]
         
         # test input 1 from the description of the problem
-        self.list1= [ 
+        self.__list1= [ 
            books(1,  False, "book",12.49),  
           Item(1 ,False,"music CD" , 14.99),
           food(1 ,False, "chocolate bar", 0.85)
                ]
         # test input 2 from the description of the problem
-        self.list2 =[
+        self.__list2 =[
         food(1,  True ,"box of chocolates",   10.00),
         Item(1 ,True, "bottle of perfume ",  47.50)
             ]
        
        # test input 3 from the description of the problem
-        self.list3=[ 
+        self.__list3=[ 
         Item (1 ,True, "bottle of perfume" , 27.99),
         Item (1,False, "bottle of perfume" , 18.99),
         medecins(1, False, "packet of headache pills", 9.75),
@@ -54,7 +54,7 @@ class store:
         while(self.store_is_open):
             # App Intro
             print("**********Welcome to Itemis Store**********")
-            print("The Store conians diffrent kind of goods.\n1- To display the former baskets please type 1 \n2- To buy new goods please type 2 \n3- list length \n3- Leave the store ")
+            print("The Store conians diffrent kind of goods.\n1- To display the former baskets please type 1 \n2- To buy new goods please type 2  \n3- Leave the store ")
             user_input= input("please enter your choice ")
             
             # take in the choice of the user
@@ -63,13 +63,13 @@ class store:
                 user_input = input("please enter your choice ")
                 if(int(user_input)==1):
                     self.cls()
-                    reciept(self.list1)
+                    reciept(self.__list1)
                 elif(int(user_input) ==2):
                     self.cls()
-                    reciept(self.list2)
+                    reciept(self.__list2)
                 elif(int(user_input) ==3):
                     self.cls()
-                    reciept(self.list3)
+                    reciept(self.__list3)
                 else:
                     print("invailed input ")
 
@@ -105,10 +105,10 @@ class store:
                         return_to_menu = True
                         
         
-            elif(int(user_input) == 3):
-                print(len(self.shopped_items))
+            # elif(int(user_input) == 3):
+            #     print(len(self.shopped_items))
             
-            elif(int(user_input) == 4):
+            elif(int(user_input) == 3):
                 self.cls()
                 print("thank you for visting the store\nHave a nice day \nBye")
                 self.store_is_open = False

@@ -51,6 +51,8 @@ def reciept(items):
         totaltax: rounded amount of the total withdrawn tax
         totalPrice: rounded amount of the total price
     """
+    print("******** The reciept ********")
+    
     tax =None
     totaltax =0
     newTaxedItemPrice =None
@@ -58,10 +60,9 @@ def reciept(items):
     for item in items:
         
         newTaxedItemPrice, tax = tax_calculator(item)
-        print("******** The reciept ********")
         print(f"{item.amount} {item.get_Name()} {newTaxedItemPrice}")
         totaltax +=tax
-        totalPrice += newTaxedItemPrice
+        totalPrice += newTaxedItemPrice * item.amount
     print(f"Sales Taxes: {round(totaltax,2)} \nTotal Price: {round(totalPrice,2)}")
     return round(totaltax,2), round(totalPrice,2)
 
@@ -75,7 +76,7 @@ def reciept_without_print(items):
         
         newTaxedItemPrice, tax = tax_calculator(item)
         totaltax +=tax
-        totalPrice += newTaxedItemPrice
+        totalPrice += newTaxedItemPrice * item.amount
     return round(totaltax,2), round(totalPrice,2)
 
 

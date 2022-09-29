@@ -42,6 +42,8 @@ class Unit_tests(unittest.TestCase):
         price_after_tax, withdrawn_tax = tax_calculator(self.list2[1])
         self.assertEqual(price_after_tax,54.65)
         
+        
+        
     
     # test the reciept and check the total Sales Tax and the Total of the whole shop-list
     def test_reciept_printer(self):
