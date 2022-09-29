@@ -62,7 +62,7 @@ def reciept(items):
         newTaxedItemPrice, tax = tax_calculator(item)
         print(f"{item.amount} {item.get_Name()} {newTaxedItemPrice}")
         totaltax +=tax
-        totalPrice += newTaxedItemPrice * item.amount
+        totalPrice += newTaxedItemPrice 
     print(f"Sales Taxes: {round(totaltax,2)} \nTotal Price: {round(totalPrice,2)}")
     return round(totaltax,2), round(totalPrice,2)
 
