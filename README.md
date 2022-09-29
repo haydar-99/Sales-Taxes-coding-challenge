@@ -19,3 +19,5 @@ The project is built with test driven programming there I added a folder with un
 To print out the output of diffrent input that are given in chlallenge description run the app and  just follow the instructions in the terminal and choose "To display the former baskets please type 1"
 
 Please contact me in case of any questions. I did not have any extra modules so the project should run without any additional packages if you have the requirement to run python on your  machine. 
+
+OBS: There is a class diagram however it is in PDF format. 
